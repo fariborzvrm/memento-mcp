@@ -180,7 +180,7 @@ Add to `opencode.json` (project) or `~/.config/opencode/opencode.json` (global):
   "mcp": {
     "memento": {
       "type": "local",
-      "command": ["uv", "run", "https://raw.githubusercontent.com/<you>/memento-mcp/v1.0.0/memento_server.py"],
+      "command": ["uv", "run", "https://raw.githubusercontent.com/fariborzvrm/memento-mcp/v1.0.0/memento_server.py"],
       "enabled": true
     }
   }
@@ -190,7 +190,7 @@ Add to `opencode.json` (project) or `~/.config/opencode/opencode.json` (global):
 ### Claude Code
 
 ```bash
-claude mcp add memento -- uv run https://raw.githubusercontent.com/<you>/memento-mcp/v1.0.0/memento_server.py
+claude mcp add memento -- uv run https://raw.githubusercontent.com/fariborzvrm/memento-mcp/v1.0.0/memento_server.py
 ```
 
 Or manually in `~/.claude.json`:
@@ -200,7 +200,7 @@ Or manually in `~/.claude.json`:
   "mcpServers": {
     "memento": {
       "command": "uv",
-      "args": ["run", "https://raw.githubusercontent.com/<you>/memento-mcp/v1.0.0/memento_server.py"]
+      "args": ["run", "https://raw.githubusercontent.com/fariborzvrm/memento-mcp/v1.0.0/memento_server.py"]
     }
   }
 }
@@ -213,7 +213,7 @@ Add to `~/.codex/config.toml`:
 ```toml
 [mcp_servers.memento]
 command = "uv"
-args = ["run", "https://raw.githubusercontent.com/<you>/memento-mcp/v1.0.0/memento_server.py"]
+args = ["run", "https://raw.githubusercontent.com/fariborzvrm/memento-mcp/v1.0.0/memento_server.py"]
 ```
 
 Or per-project in `.codex/config.toml`.
@@ -336,7 +336,7 @@ Estimate: **1 day**.
 - [ ] Registered successfully in **OpenCode** — `write` tool creates `DECISIONS.md`.
 - [ ] Registered successfully in **Claude Code** — same test.
 - [ ] Registered successfully in **Codex CLI** — same test.
-- [ ] (After GitHub push) `uv run https://raw.githubusercontent.com/<you>/memento-mcp/v1.0.0/memento_server.py` works end-to-end; README placeholders replaced with the real username.
+- [ ] (After GitHub push) `uv run https://raw.githubusercontent.com/fariborzvrm/memento-mcp/v1.0.0/memento_server.py` works end-to-end; README placeholders replaced with the real username.
 - [ ] `README.md` documents all three setups in under 2 pages.
 - [ ] `AGENTS.md` snippet works verbatim in OpenCode and Codex; Claude Code section explains the `CLAUDE.md` pointer line.
 - [ ] Dependencies: `mcp` and Python 3.11+ stdlib only (uv handles the env).
@@ -359,7 +359,7 @@ Give your coding agent persistent memory.
 ## Install
 1. Install uv (once per machine): winget / curl one-liners
 2. Register in your CLI — no download:
-   uv run https://raw.githubusercontent.com/<you>/memento-mcp/v1.0.0/memento_server.py
+   uv run https://raw.githubusercontent.com/fariborzvrm/memento-mcp/v1.0.0/memento_server.py
    (OpenCode / Claude Code / Codex CLI snippets + verification step)
 3. Per project: uv run <url> init  (writes .memento.toml + AGENTS.md snippet)
    (Claude Code only: pointer line in CLAUDE.md)

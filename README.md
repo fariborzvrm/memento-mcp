@@ -41,7 +41,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 Point your CLI at the script URL, pinned to the `v1.0.0` tag so it never
 changes under you. (Use `main` instead of `v1.0.0` if you want to track the
-latest. Replace `<you>` with your GitHub username.)
+latest.)
 
 #### OpenCode
 
@@ -54,7 +54,7 @@ Add to `opencode.json` (project) or `~/.config/opencode/opencode.json` (global):
       "type": "local",
       "command": [
         "uv", "run",
-        "https://raw.githubusercontent.com/<you>/memento-mcp/v1.0.0/memento_server.py"
+        "https://raw.githubusercontent.com/fariborzvrm/memento-mcp/v1.0.0/memento_server.py"
       ],
       "enabled": true
     }
@@ -65,7 +65,7 @@ Add to `opencode.json` (project) or `~/.config/opencode/opencode.json` (global):
 #### Claude Code
 
 ```bash
-claude mcp add memento -- uv run https://raw.githubusercontent.com/<you>/memento-mcp/v1.0.0/memento_server.py
+claude mcp add memento -- uv run https://raw.githubusercontent.com/fariborzvrm/memento-mcp/v1.0.0/memento_server.py
 ```
 
 Or manually in `~/.claude.json`:
@@ -75,7 +75,7 @@ Or manually in `~/.claude.json`:
   "mcpServers": {
     "memento": {
       "command": "uv",
-      "args": ["run", "https://raw.githubusercontent.com/<you>/memento-mcp/v1.0.0/memento_server.py"]
+      "args": ["run", "https://raw.githubusercontent.com/fariborzvrm/memento-mcp/v1.0.0/memento_server.py"]
     }
   }
 }
@@ -88,7 +88,7 @@ Add to `~/.codex/config.toml` (or per-project `.codex/config.toml`):
 ```toml
 [mcp_servers.memento]
 command = "uv"
-args = ["run", "https://raw.githubusercontent.com/<you>/memento-mcp/v1.0.0/memento_server.py"]
+args = ["run", "https://raw.githubusercontent.com/fariborzvrm/memento-mcp/v1.0.0/memento_server.py"]
 ```
 
 #### Verify
@@ -101,7 +101,7 @@ tools.
 Run in the project root:
 
 ```bash
-uv run https://raw.githubusercontent.com/<you>/memento-mcp/v1.0.0/memento_server.py init
+uv run https://raw.githubusercontent.com/fariborzvrm/memento-mcp/v1.0.0/memento_server.py init
 ```
 
 This creates `.memento.toml` (`memory_dir = "docs/memory"`) and writes the
@@ -129,7 +129,7 @@ Prefer a local copy, or can't use uv?
 
 ```bash
 # local copy, still no venv juggling
-curl -o memento_server.py https://raw.githubusercontent.com/<you>/memento-mcp/v1.0.0/memento_server.py
+curl -o memento_server.py https://raw.githubusercontent.com/fariborzvrm/memento-mcp/v1.0.0/memento_server.py
 # point your CLI at: ["uv", "run", "/path/to/memento_server.py"]
 
 # or plain Python (3.11+)
