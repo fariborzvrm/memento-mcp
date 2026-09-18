@@ -1,0 +1,10 @@
+[project]
+name = "memento-mcp"
+version = "1.0.0"
+description = "MCP server giving coding agents typed tools over a project's markdown memory folder."
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = ["mcp>=2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
